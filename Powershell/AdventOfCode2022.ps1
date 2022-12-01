@@ -21,7 +21,8 @@ function start-day1 {
         ($convertedstringitem | Measure-Object -Sum).Sum
     }
     
+    $day1b = $(( $addedUpData | Sort-Object -Descending )[0..2])
     
-    
-    write-host "Day 1a: $(( $addedUpData | Sort-Object -Descending )[0])"
+    Write-Host "Day 1a: $(( $addedUpData | Sort-Object -Descending )[0])"
+    Write-Host "Day 1b: $(( $day1b | Measure-Object -Sum ).Sum)"
 }
